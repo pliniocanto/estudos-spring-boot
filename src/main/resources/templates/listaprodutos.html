@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,22 +24,26 @@
 <body>
 
 	<div class="container">
-
-		<!-- Main component for a primary marketing message or call to action -->
-		<div class="jumbotron">
-			<h1>Navbar example</h1>
-			<p>This example is a quick exercise to illustrate how the
-				default, static and fixed to top navbar work. It includes the
-				responsive CSS and HTML, so it also adapts to your viewport and
-				device.</p>
-			<p>To see the difference between static and fixed top navbars,
-				just scroll.</p>
-			<p>
-				<a class="btn btn-lg btn-primary" href="../../components/#navbar"
-					role="button">View navbar docs &raquo;</a>
-			</p>
-		</div>
-
+		<h1>Produtos</h1>
+		
+		<table id="produtos" class="table striped">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nome</th>
+					<th>Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="produto : ${produtos}">
+					<td th:text="${produto.id}"></td>
+					<td th:text="${produto.nome}"></td>
+					<td th:text="${produto.valor}"></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
 	</div>
 	<!-- /container -->
 
