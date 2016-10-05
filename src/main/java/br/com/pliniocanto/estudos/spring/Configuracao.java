@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class Configuracao {
 
-	@RequestMapping("/")
-	@ResponseBody
-	String ola() {
-		return "olá!";
-	}
+    @RequestMapping("/")
+    @ResponseBody
+    String ola() {
+        return "olá!";
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(Configuracao.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Configuracao.class, args);
+    }
 
 }
